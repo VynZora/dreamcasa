@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+{% load static %}
+<html class="wide wow-animation" lang="en">
+  <head>
+    <!-- Site Title-->
+    <title>Home</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="{% static 'images/fav.png' %}" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,700,400italic%7CPoppins:300,400,500,700">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <style>
+    .full-width-slider {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+  
+  .swiper-container {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+  }
+  
+.loader {
+
+	width: 5.5em;
+	height: 3.5em;
+	margin: 100px auto;
+	background: #8f859e;
+	position: relative;
+	box-shadow: #8f859e 0 0 20px inset;
+	
+}
+
+.loader .hotel-sign {
+	padding: .25em 0;
+	position: absolute;
+
+	width: 0.5em;
+	content: " ";
+	text-align: center;
+	background: #8f859e;
+	font-family: sans-serif;
+	font-weight: 700;
+	border-radius: 4px;
+	box-shadow: #8f859e 0 0 10px inset;
+	animation: neon 3s infinite ease;
+}
+
+.loader .hotel-sign span {
+	line-height: 1;
+}
+
+.loader .window {
+	background: white;
+	width: .5em;
+	height: 1em;
+	float: left;
+	margin: 0 .5em .5em 0;
+	border-radius: 2px;
+	animation: flicker 1s infinite ease;
+}
+
+  </style>   
+  <style>
+.middle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.bar {
+  width: 10px;
+  height: 70px;
+  background: #fff;
+  display: inline-block;
+  transform-origin: bottom center;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  animation: loader 2s linear infinite; /* Increased the duration to 2s */
+}
+
+.bar1 {
+  animation-delay: 0.1s;
+}
+.bar2 {
+  animation-delay: 0.2s;
+}
+.bar3 {
+  animation-delay: 0.3s;
+}
+.bar4 {
+  animation-delay: 0.4s;
+}
+.bar5 {
+  animation-delay: 0.5s;
+}
+.bar6 {
+  animation-delay: 0.6s;
+}
+.bar7 {
+  animation-delay: 0.7s;
+}
+.bar8 {
+  animation-delay: 0.8s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scaleY(0.1);
+    background: transparent;
+  }
+  50% {
+    transform: scaleY(1);
+    background: #8f859e;
+  }
+  100% {
+    transform: scaleY(0.1);
+    background: transparent;
+  }
+}
+
+  </style>
+  <body>
+   <!-- Page preloader-->
+      <div class="page-loader">
+        <div>
+          <div class="middle">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+            <div class="bar bar4"></div>
+            <div class="bar bar5"></div>
+            <div class="bar bar6"></div>
+            <div class="bar bar7"></div>
+            <div class="bar bar8"></div>
+          </div>
+        
+       
+        </div>
+      </div>
+      <!-- Page Header-->
+      <header class="page-header" style="padding-bottom: 24px;">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-default-with-top-panel" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fullwidth" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fullwidth" data-lg-device-layout="rd-navbar-fullwidth" data-md-stick-up-offset="90px" data-lg-stick-up-offset="150px" data-stick-up="true" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true">
+            <div class="rd-navbar-top-panel rd-navbar-collapse">
+              <div class="rd-navbar-top-panel-inner">
+                <div class="left-side">
+                  <div class="group"><span class="text-italic">Follow Us:</span>
+                    <ul class="list-inline">
+                      <li><a class="icon icon-sm icon-secondary-5 fa fa-instagram" href="https://www.instagram.com/reel/DCto3bLp1Gs/?igsh=bjd6ZTZpb2p3a285"></a></li>
+                      <li><a class="icon icon-sm icon-secondary-5 fa fa-facebook" href="#"></a></li>
+                      <li><a class="icon icon-sm icon-secondary-5 fa fa-twitter" href="#"></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="center-side">
+                  <!-- RD Navbar Brand-->
+                  <div class="rd-navbar-brand fullwidth-brand"><a class="brand-name" href="{% url 'index' %}"><img src="{% static 'images/loggo.png' %}" alt="" width="314" height="48"/></a></div>
+                </div>
+                <div class="right-side">
+                  <!-- Contact Info-->
+                  <div class="contact-info">
+                    <div class="unit unit-middle unit-horizontal unit-spacing-xs">
+                      <div class="unit__left"><span class="icon icon-primary text-middle mdi mdi-phone"></span></div>
+                      <div class="unit__body"><a class="text-middle" href="tel:#">+91 8590483249</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rd-navbar-inner">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <!-- RD Navbar collapse toggle-->
+                <button class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand mobile-brand"><a class="brand-name" href="{% url 'index' %}"><img src="{% static 'images/loggo.png' %}" alt="" width="314" height="48"/></a></div>
+              </div>
+              <div class="rd-navbar-aside-right">
+                <div class="rd-navbar-nav-wrap">
+                  <div class="rd-navbar-nav-scroll-holder">
+                    <ul class="rd-navbar-nav">
+                      <li class="active"><a href="{% url 'index' %}">Home</a>
+                      </li>
+                      <li><a href="{% url 'about' %}">About Us</a>
+                      </li>
+                      <li><a href="{% url 'rooms' %}">Rooms</a>
+                      </li>
+                      <li><a href="{% url 'near_by_places' %}">Near By Places</a>
+                      </li>
+                      <li><a href="{% url 'our_gallery' %}">Our Gallery</a>
+                      </li>
+                      <li><a href="{% url 'booking' %}">Booking</a>
+                      </li>
+                      <li><a href="{% url 'contact' %}">Contacts</a>
+                      </li>
+                  
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <section class="section full-width-slider">
+        <div class="swiper-container swiper-slider swiper-style-2" data-loop="false" data-autoplay="5500" data-simulate-touch="false" data-slide-effect="slide" data-direction="vertical">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url('{% static 'images/img1.jpg' %}');">
+              <div class="swiper-slide-caption">
+                <div class="shell text-sm-left">
+                <h1 data-caption-animate="slideInDown" data-caption-delay="100">Dream Casa Homestay</h1>
+                    <div class="slider-subtitle-group">
+                      <div class="decoration-line" data-caption-animate="slideInDown" data-caption-delay="400"></div>
+                      <h4 data-caption-animate="slideInLeft" data-caption-delay="700">Experience the perfect blend of comfort</h4>
+                      <h3 data-caption-animate="slideInLeft" data-caption-delay="800">and relaxation!</h3>
+                    </div>
+
+                  <a class="button button-effect-ujarak button-lg button-white-outline button-square" href="#aaaa1"data-caption-animate="slideInLeft" data-caption-delay="1150"><span>learn more</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url('{% static 'images/img2.jpg' %}');">
+              <div class="swiper-slide-caption">
+                <div class="shell text-sm-left">
+                 <h1 data-caption-animate="slideInDown" data-caption-delay="100">Your Ideal Retreat</h1>
+                    <div class="slider-subtitle-group">
+                      <div class="decoration-line" data-caption-animate="slideInDown" data-caption-delay="400"></div>
+                      <h4 data-caption-animate="slideInLeft" data-caption-delay="700">Savor the stunning landscapes of Munnar’s hills</h4>
+                      <h3 data-caption-animate="slideInLeft" data-caption-delay="800">and embrace comfort and relaxation</h3>
+                    </div>
+
+                  <a class="button button-effect-ujarak button-lg button-white-outline button-square" href="#aaaa1" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>learn more</span></a>
+                </div>
+              </div>
+              <!-- Slide content here -->
+            </div>
+            <div class="swiper-slide" style="background-image: url('{% static 'images/img8.jpg' %}');">
+              <div class="swiper-slide-caption">
+                <div class="shell text-sm-left">
+               <h1 data-caption-animate="slideInDown" data-caption-delay="100">Relax & Unwind</h1>
+                    <div class="slider-subtitle-group">
+                      <div class="decoration-line" data-caption-animate="slideInDown" data-caption-delay="400"></div>
+                      <h4 data-caption-animate="slideInLeft" data-caption-delay="700">Enjoy breathtaking views of Munnar's green hills</h4>
+                      <h3 data-caption-animate="slideInLeft" data-caption-delay="800">and experience true comfort and tranquility</h3>
+                    </div>
+
+                  <a class="button button-effect-ujarak button-lg button-white-outline button-square" href="#aaaa1" data-caption-animate="slideInLeft" data-caption-delay="1150"><span>learn more</span></a>
+                </div>
+              </div>
+              <!-- Slide content here -->
+            </div>
+          </div>
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+      </section>
+   
+            </div>
+           
+          </div>
+        </div>
+      </section>
+      <!-- About us-->
+  <section class="section section-md bg-white text-center text-sm-left">
+        <div class="shell-wide">
+          <div class="range range-50 range-xs-center overflow-hidden">
+           <div class="cell-sm-10 cell-md-8 cell-lg-7 wow fadeInUp video-container" data-wow-delay=".1s">
+  <div class="post-video post-video-border">
+    <div class="post-video__image">
+      <video class="post-video__control" autoplay muted loop poster="">
+        <source src="{% static 'videos/vd41.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>
+            <style>/* Responsive Video Styling */
+.video-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto; /* Centers the container */
+}
+
+.post-video__control {
+  width: 100%;   /* Ensures the video scales with its container */
+  height: auto;  /* Maintains aspect ratio */
+}
+
+/* Responsive Layout for Small Screens */
+@media (max-width: 767px) {
+  .video-container {
+    padding: 0 1rem; /* Adds padding to avoid video edges touching the screen */
+  }
+}
+</style>
+
+            <div class="cell-sm-10 cell-md-8 cell-lg-5 reveal-flex wow fadeInUp" data-wow-delay=".3s" id="aaaa1">
+              <div class="bg-primary section-wrap-content-var-1">
+                <div class="section-wrap-content-var-1-inner">
+                  <h2>About Us</h2>
+                  <p>Experience the charm of tea mountain views with our cozy balcony rooms and indulge in homemade, hot and spicy cuisine. Enjoy the warmth of a campfire, convenient sightseeing taxi services, and easy Cochin Airport, Allepey, and Thekkady pickup and drop-off options. Perfect for budget-conscious travelers seeking comfort and relaxation.</p>
+                  <div class="group">
+                    <dl class="list-desc">
+                      <dt>Popular Amenities:</dt>
+                      <dd><span>Wi-Fi, Power Backup, Housekeeping, Room Service, Private Parking</span></dd>
+                    </dl>
+                    <dl class="list-desc">
+                      <dt>Safety & Security:</dt>
+                      <dd><span>24-Hour Front Desk, CCTV Surveillance, Full-Day Security</span></dd>
+                    </dl>
+                    <dl class="list-desc">
+                      <dt>General Services:</dt>
+                      <dd><span>Caretaker, Luggage Assistance, Multilingual Staff</span></dd>
+                    </dl>
+                  </div>
+                  <a class="button button-effect-ujarak button-lg button-secondary-outline button-square" href="{% url 'booking' %}">
+                    <span>Book Now</span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Indoor Pool-->
+   <section class="section section-md bg-secondary-4 text-center text-sm-left">
+  <div class="shell">
+    <div class="range range-50 range-md-justify range-sm-middle">
+      <div class="cell-sm-6 cell-md-5">
+        <h3>Dream Casa Home Stay</h3>
+        <p>Welcome to Dream Casa, your perfect escape into tranquility and comfort. Nestled among lush greenery, our homestay offers a cozy ambiance with modern amenities, perfect for those seeking relaxation and a home away from home.</p>
+        <p>Our charming interiors feature rustic wooden beams and panoramic windows overlooking the scenic landscape. Enjoy delicious homemade meals at our dining area or relax in our spacious lounge. With outdoor activities, serene walking paths, and a friendly atmosphere, Dream Casa is ideal for families, couples, or solo travelers looking to unwind.</p>
+        <a class="button button-primary button button-square button-effect-ujarak button-lg" href="{% url 'about' %}"><span>Learn More</span></a>
+      </div>
+      <div class="cell-sm-6">
+        <div class="box-outline box-outline__mod-1">
+          <figure><img src="{% static 'images/abcd.jpg' %}" alt="Dream Casa Home Stay" width="546" height="516"/>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm bg-white text-sm-left">
+  <div class="shell">
+    <h3>Amenities</h3>
+    <p style="text-align: left;">  Discover the unique touches that make our services memorable, bringing guests back for another relaxing stay.</p>
+    <div class="range range-50">
+      <!-- Caretaker -->
+      <div class="cell-xs-6 cell-md-4">
+        <article class="box-minimal">
+          <div class="box-minimal-icon-big"><i class="fas fa-user-shield icon-custom-color"></i></div>
+          <h4 class="box-minimal-title">Caretaker</h4>
+          <div class="box-minimal-divider"></div>
+          <div class="box-minimal-text">Dedicated caretaker to assist with all your needs, ensuring a pleasant stay.</div>
+        </article>
+      </div>
+      <!-- Power Backup -->
+      <div class="cell-xs-6 cell-md-4">
+        <article class="box-minimal">
+          <div class="box-minimal-icon-big"><i class="fas fa-bolt icon-custom-color"></i></div>
+          <h4 class="box-minimal-title">Power Backup</h4>
+          <div class="box-minimal-divider"></div>
+          <div class="box-minimal-text">Reliable power backup for uninterrupted comfort.</div>
+        </article>
+      </div>
+      <!-- Housekeeping -->
+      <div class="cell-xs-6 cell-md-4">
+        <article class="box-minimal">
+          <div class="box-minimal-icon-big"><i class="fas fa-broom icon-custom-color"></i></div>
+          <h4 class="box-minimal-title">Housekeeping</h4>
+          <div class="box-minimal-divider"></div>
+          <div class="box-minimal-text">Daily housekeeping to maintain a clean environment.</div>
+        </article>
+      </div>
+      <!-- Wi-Fi -->
+      <div class="cell-xs-6 cell-md-4">
+        <article class="box-minimal">
+          <div class="box-minimal-icon-big"><i class="fas fa-wifi icon-custom-color"></i></div>
+          <h4 class="box-minimal-title">Wi-Fi</h4>
+          <div class="box-minimal-divider"></div>
+          <div class="box-minimal-text">Free high-speed Wi-Fi throughout the property.</div>
+        </article>
+      </div>
+      <!-- CCTV Security -->
+      <div class="cell-xs-6 cell-md-4">
+        <article class="box-minimal">
+          <div class="box-minimal-icon-big"><i class="fas fa-video icon-custom-color"></i></div>
+          <h4 class="box-minimal-title">CCTV Security</h4>
+          <div class="box-minimal-divider"></div>
+          <div class="box-minimal-text">24/7 CCTV monitoring for enhanced safety.</div>
+        </article>
+      </div>
+      <!-- Luggage Assistance -->
+      <div class="cell-xs-6 cell-md-4">
+        <article class="box-minimal">
+          <div class="box-minimal-icon-big"><i class="fas fa-suitcase-rolling icon-custom-color"></i></div>
+          <h4 class="box-minimal-title">Luggage Assistance</h4>
+          <div class="box-minimal-divider"></div>
+          <div class="box-minimal-text">Assistance with luggage for a smooth check-in and check-out experience.</div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Custom CSS -->
+<style>
+  .icon-custom-color {
+    color: #8f859e;
+  }
+</style>
+
+      <!-- Portfolio-->
+<!--      <section class="section section-md bg-white text-center text-sm-left">-->
+<!--        <div class="shell-wide">-->
+<!--          <div class="range range-10 range-middle">-->
+<!--            <div class="cell-sm-6">-->
+<!--              <h3>Our Gallery</h3>-->
+<!--            </div>-->
+<!--            <div class="cell-sm-6 text-sm-right"><a class="heading-link link-gray-darker" href="#">See All Photos</a></div>-->
+<!--          </div>-->
+<!--          <hr>-->
+<!--          <div class="isotope-wrap">-->
+            <!-- Isotope Content-->
+<!--            <div class="row isotope" data-isotope-layout="masonry" data-isotope-group="gallery" data-lightgallery="group">-->
+<!--              <div class="col-xs-12 col-sm-6 col-md-3 grid-sizer"></div>-->
+<!--              <div class="col-xs-12 col-sm-6 col-md-3 isotope-item wow fadeInUp" data-filter="Category 1" data-wow-delay=".1s"><a class="portfolio-item thumbnail-classic" href="images/gallery-1-533x800_original.jpg" data-size="533x800" data-lightgallery="item"><img src="images/gallery-1-420x584.jpg" alt="" width="420" height="584"/>-->
+<!--                  <figure></figure>-->
+<!--                  <div class="caption"><span class="icon mdi-thumb-up-outline">346</span><span class="icon mdi-eye">220</span></div></a>-->
+<!--              </div>-->
+<!--              <div class="col-xs-12 col-sm-6 col-md-3 isotope-item wow fadeInUp" data-filter="Category 1" data-wow-delay=".2s"><a class="portfolio-item thumbnail-classic" href="images/gallery-2-1199x800_original.jpg" data-size="1199x800" data-lightgallery="item"><img src="images/gallery-2-420x278.jpg" alt="" width="420" height="278"/>-->
+<!--                  <figure></figure>-->
+<!--                  <div class="caption"><span class="icon mdi-thumb-up-outline">346</span><span class="icon mdi-eye">220</span></div></a>-->
+<!--              </div>-->
+<!--              <div class="col-xs-12 col-sm-6 col-md-3 isotope-item wow fadeInUp" data-filter="Category 1" data-wow-delay=".4s"><a class="portfolio-item thumbnail-classic" href="images/gallery-3-584x800_original.jpg" data-size="584x800" data-lightgallery="item"><img src="images/gallery-3-420x584.jpg" alt="" width="420" height="584"/>-->
+<!--                  <figure></figure>-->
+<!--                  <div class="caption"><span class="icon mdi-thumb-up-outline">346</span><span class="icon mdi-eye">220</span></div></a>-->
+<!--              </div>-->
+<!--              <div class="col-xs-12 col-sm-6 col-md-3 isotope-item wow fadeInUp" data-filter="Category 1" data-wow-delay=".5s"><a class="portfolio-item thumbnail-classic" href="images/gallery-4-1200x800_original.jpg" data-size="1200x800" data-lightgallery="item"><img src="images/gallery-4-420x278.jpg" alt="" width="420" height="278"/>-->
+<!--                  <figure></figure>-->
+<!--                  <div class="caption"><span class="icon mdi-thumb-up-outline">346</span><span class="icon mdi-eye">220</span></div></a>-->
+<!--              </div>-->
+<!--              <div class="col-xs-12 col-sm-6 col-md-3 isotope-item wow fadeInUp" data-filter="Category 1" data-wow-delay=".3s"><a class="portfolio-item thumbnail-classic" href="images/gallery-5-1200x800_original.jpg" data-size="1200x800" data-lightgallery="item"><img src="images/gallery-5-420x278.jpg" alt="" width="420" height="278"/>-->
+<!--                  <figure></figure>-->
+<!--                  <div class="caption"><span class="icon mdi-thumb-up-outline">346</span><span class="icon mdi-eye">220</span></div></a>-->
+<!--              </div>-->
+<!--              <div class="col-xs-12 col-sm-6 col-md-3 isotope-item wow fadeInUp" data-filter="Category 1" data-wow-delay=".6s"><a class="portfolio-item thumbnail-classic" href="images/gallery-6-1200x798_original.jpg" data-size="1200x798" data-lightgallery="item"><img src="images/gallery-6-420x278.jpg" alt="" width="420" height="278"/>-->
+<!--                  <figure></figure>-->
+<!--                  <div class="caption"><span class="icon mdi-thumb-up-outline">346</span><span class="icon mdi-eye">220</span></div></a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </section>-->
+
+<section class="section section-md text-center">
+  <div class="shell">
+      <h3 style="text-align: left;">What People Say</h3>
+      <p style="text-align: left;">Read the experiences that make our services stand out and why guests keep coming back.</p>
+      <div class="range range-50">
+          <div class="cell-xs-12">
+              <div class="box-outline box-outline-fullwidth box-outline__mod-1">
+                  <div class="quote-carousel-wrap">
+                      <!-- Main Carousel for Testimonials -->
+                      <div class="slick-slider" id="testimonial-carousel" data-arrows="false" data-loop="true" data-dots="false" data-autoplay="true" data-autoplay-speed="3000">
+                          {% for review in client_reviews %}
+                              <div class="item">
+                                  <div class="quote-center">
+                                      <div class="quote-center-title">
+                                           <!-- Displaying a snippet of the review -->
+                                      </div>
+                                      <p class="quote-center-body">
+                                          <q>{{ review.review }}</q>
+                                      </p>
+                                      <div class="quote-center-cite">
+                                          <cite>{{ review.client_name }}</cite><span>{{ review.designation }}</span>
+                                      </div>
+                                  </div>
+                              </div>
+                          {% endfor %}
+                      </div>
+
+                      <!-- Thumbnail Carousel for Profile Images -->
+                      <div class="slick-slider" id="profile-carousel" data-arrows="false" data-loop="true" data-dots="false" data-autoplay="true" data-autoplay-speed="3000" data-as-nav-for="#testimonial-carousel">
+                          {% for review in client_reviews %}
+                              <div class="item">
+                                  <figure><img class="img-circle highlight-profile" src="{{ review.client_image.url }}" alt="{{ review.client_name }}" width="100" height="100"/></figure>
+                              </div>
+                          {% endfor %}
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+      
+      <!-- CSS for Highlighting First Profile Image (Optional) -->
+      <!-- <style>
+        .highlight-profile {
+            border: 3px solid #FFD700; /* Gold border for emphasis */
+            padding: 2px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Optional shadow */
+        }
+      </style> -->
+      
+      <!-- jQuery and Slick Carousel Initialization -->
+      <script>
+      $(document).ready(function(){
+        // Initialize the main testimonial carousel
+        $('#testimonial-carousel').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            fade: true, // Smooth fade transition
+            asNavFor: '#profile-carousel',
+            arrows: false,
+        });
+      
+        // Initialize the profile image carousel and sync with testimonial carousel
+        $('#profile-carousel').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '#testimonial-carousel',
+            focusOnSelect: true,
+            centerMode: true,
+            infinite: true,
+            arrows: false,
+        });
+      });
+      </script>
+
+<section class="section section-md">
+
+  <div class="shell">
+    <h3 style="text-align: left;">Near By Places</h3>
+    <div class="range range-30" data-lightgallery="group">
+      {% for place in places %}
+        <div class="cell-sm-6 cell-md-4">
+          <a class="thumbnail-classic" href="{% url 'near_by_place_details' place.id %}">
+            <figure class="image-container">
+              <img src="{{ place.image.url }}" alt="{{ place.name }}" class="image" />
+            </figure>
+            <div class="caption">
+              <p class="caption-title">{{ place.name }}</p>
+              <!-- <p class="caption-text" style="color: white;">{{ place.description|safe }}</p> -->
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+<style>
+  /* Style for image container */
+.image-container {
+position: relative;
+overflow: hidden;
+height: 276px; /* Set the height of the container */
+}
+
+/* Style for images to fit within the container */
+.image {
+width: 100%;
+height: 100%;
+object-fit: cover; /* This will ensure the image covers the area without distortion */
+}
+
+</style>
+
+
+<!-- Page Footer-->
+<footer class="page-footer text-left text-sm-left">
+  <div class="shell-wide">
+ 
+    <div class="page-footer-minimal">
+      <div class="shell-wide">
+        <div class="range range-50">
+          <!-- Opening Hours Section -->
+          <div class="cell-sm-6 cell-md-3 cell-lg-4 wow fadeInUp" data-wow-delay=".1s">
+            <div class="page-footer-minimal-inner">
+              <h4>Reservations</h4>
+              <ul class="list-unstyled">
+                <li>
+                  <div class="group-xs">
+                    <div style="margin-bottom: 10px;">
+                      <dl class="list-desc">
+                        <dt><span class="icon icon-sm mdi mdi-phone"></span></dt>
+                    <dd class="text-gray-darker"><a class="link link-gray-darker" href="tel:+918590483249">+91 8590483249</a></dd>
+                      </dl>
+                    </div>
+                    <div>
+                      <dl class="list-desc">
+                        <dt><span class="icon icon-sm mdi mdi-gmail"></span></dt>
+                        <dd class="text-gray-darker"><a class="link link-gray-darker" href="mail:dreamcasa@gmail.com">dreamcasamunnar@gmail.com</a></dd>
+                      </dl>
+                    </div> 
+                    <ul class="list-inline">
+                      <li><a class="icon icon-sm icon-secondary-5 fa fa-instagram" href="https://www.instagram.com/reel/DCto3bLp1Gs/?igsh=bjd6ZTZpb2p3a285"></a></li>
+                      <li><a class="icon icon-sm icon-secondary-5 fa fa-facebook" href="#"></a></li>
+                      <li><a class="icon icon-sm icon-secondary-5 fa fa-twitter" href="#"></a></li>
+                    </ul>
+                    <!-- <div>
+                      <dl class="list-desc">
+                        <dt>Mail:</dt>
+                        <dd class="text-gray-darker"><span>reservations@hotelriver.com</span></dd>
+                      </dl>
+                    </div> -->
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Address Section -->
+          <div class="cell-sm-6 cell-md-5 cell-lg-4 wow fadeInUp" data-wow-delay=".2s">
+            <div class="page-footer-minimal-inner">
+              <h4>Quick Links
+              </h4>
+              <ul class="list-unstyled">
+                <li>
+                  <dl class="list-desc">
+                    <!-- <dt><span class="icon icon-sm mdi mdi-map-marker"></span></dt> -->
+                    <dd><a class="link link-gray-darker" href="{% url 'about' %}">About</a></dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="list-desc">
+                    <!-- <dt><span class="icon icon-sm mdi mdi-map-marker"></span></dt> -->
+                    <dd><a class="link link-gray-darker" href="{% url 'near_by_places' %}">Near By Places</a></dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="list-desc">
+                    <!-- <dt><span class="icon icon-sm mdi mdi-phone"></span></dt> -->
+                    <dd class="text-gray-darker"><a class="link link-gray-darker" href="{% url 'our_gallery' %}">Our Gallery</a></dd>
+                  </dl>
+                </li>
+                
+                <li>
+                  <dl class="list-desc">
+                    <!-- <dt><span class="icon icon-sm mdi mdi-phone"></span></dt> -->
+                    <dd class="text-gray-darker"><a class="link link-gray-darker" href="{% url 'contact' %}">Contacts</a></dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Home Stay Amenities Section -->
+          <div class="cell-sm-8 cell-md-4 wow fadeInUp" data-wow-delay=".3s">
+            <div class="page-footer-minimal-inner">
+              <h4>Our Location</h4>
+              <div style="width: 100%; margin-bottom: 15px;">
+                <!-- Google Maps Iframe -->
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100.0!2d77.0!3d10.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z10.033241LC03Ny4wNDIwMzI!5e0!3m2!1sen!2sus!4v1690207390095!5m2!1sen!2sus"
+                  width="100%"
+                  height="150"
+                  style="border:0; border-radius: 8px;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+        <!-- Footer Credits -->
+        <div class="range range-50">
+          <div class="cell-sm-12 text-center">
+            <p class="rights">
+              <span>&copy;&nbsp;</span><span>2024</span><span>&nbsp;</span> Dream Casa Home Stay. All Rights Reserved. Design by
+              <a href="https://www.vynzora.com">VynZora</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <!-- PANEL-->
+    <!-- END PANEL-->
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- PhotoSwipe Gallery-->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+            <button class="pswp__button pswp__button--share" title="Share"></button>
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__cent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Javascript-->
+    <script src="{% static 'js/core.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <!--Coded by Drel-->
+  </body>
+</html>
