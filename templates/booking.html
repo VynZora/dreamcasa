@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <link rel="icon" href="{% static 'images/fav.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favv.png' %}" type="image/x-icon">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,700,400italic%7CPoppins:300,400,500,700">
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
@@ -239,14 +239,9 @@
           <div class="cell-lg-6 cell-md-4 cell-xs-6">
             <p class="text-uppercase">Adults</p>
             <div class="form-wrap form-wrap-validation">
-              <select class="form-input select-filter" data-minimum-results-search="-1" name="adults" data-placeholder="1" data-constraints="@Required">
-                <option value="">&nbsp;</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
+              <input class="form-input" id="contact-phone" type="text" name="adults" data-constraints="@Required">
+              <label class="form-label" for="contact-phone">Adults</label>
+          
             </div>
           </div>
 
@@ -254,14 +249,9 @@
           <div class="cell-lg-6 cell-md-4 cell-xs-6">
             <p class="text-uppercase">Children</p>
             <div class="form-wrap form-wrap-validation">
-              <select class="form-input select-filter" data-minimum-results-search="-1" data-placeholder="0" name="children" data-constraints="@Required">
-                <option value="">&nbsp;</option>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
+           
+              <input class="form-input" id="contact-phone" type="text" name="children" data-constraints="@Required">
+              <label class="form-label" for="contact-phone">Children</label>
             </div>
           </div>
 
