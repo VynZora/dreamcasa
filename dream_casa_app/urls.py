@@ -5,18 +5,27 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
+
+
+  path('booking1', views.booking1, name= 'booking1'),
+
+
+
     # User Side
     path('', views.index, name= 'index'),
-    path('about', views.about, name= 'about'),
-    path('contact', views.contact, name= 'contact'),
-    path('booking', views.booking, name= 'booking'),
-    path('rooms', views.rooms, name= 'rooms'),
-    path('room_details', views.room_details, name= 'room_details'),
-    path('near_by_places', views.near_by_places, name= 'near_by_places'),
-    path('near_by_place_details/<int:place_id>/', views.near_by_place_details, name='near_by_place_details'),
-    path('our_gallery', views.our_gallery, name= 'our_gallery'),
-    path('our_gallery', views.our_gallery, name= 'our_gallery'),
+    path('about/', views.about, name= 'about'),
+    path('contact/', views.contact, name= 'contact'),
+    path('booking/', views.booking, name= 'booking'),
+    path('rooms/', views.rooms, name= 'rooms'),
+    path('room-details/', views.room_details, name= 'room_details'),
+    path('near-by-places/', views.near_by_places, name= 'near_by_places'),
+    path('near-by-place-details/<int:place_id>/', views.near_by_place_details, name='near_by_place_details'),
+    path('our-gallery/', views.our_gallery, name= 'our_gallery'),
+    
     path('gallery/<int:folder_id>/', views.gallery, name= 'gallery'),
+
+   path('save-message/', views.save_chat_message, name='save_chat_message'),
+
 
 
 
@@ -65,6 +74,11 @@ urlpatterns = [
 
     # add PRice
     path('add-price', views.add_price, name='add_price'),
+
+    # chatbot
+path('view-chatbot-messages', views.view_chatbot_messages, name='view_chatbot_messages'),
+path('delete-chatbot-message/<int:message_id>/', views.delete_chatbot_message, name='delete_chatbot_message'),
+
 
 
 

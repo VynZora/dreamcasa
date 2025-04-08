@@ -4,8 +4,9 @@
 {% block content %}
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-     
+<!-- Toast -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <div class="container">
 <br><br><br><br><br><br>
   
@@ -69,6 +70,86 @@
     
   
 </div>
+
+
+<!-- Toast -->
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script>
+  {% if messages %}
+      {% for message in messages %}
+          toastr.success("{{ message }}");
+      {% endfor %}
+  {% endif %}
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  toastr.options = {
+      "closeButton": true,
+      "debug": false,
+      "newestOnTop": false,
+      "progressBar": true,
+      "positionClass": "toast-top-right",
+      "preventDuplicates": false,
+      "onclick": null,
+      "showDuration": "300",
+      "hideDuration": "1000",
+      "timeOut": "5000",
+      "extendedTimeOut": "1000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+  };
+
+});
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+<script>
+$(window).on('load', function() {
+  $(".page-loader").fadeOut("slow");
+});
+</script>
+
+<style>
+/* Customize the toast background color and text color */
+#toast-container > .toast {
+    background-color: #065265 !important; /* Set the background color */
+    color: white !important; /* Set the text color */
+}
+
+/* Customize the title color inside the toast */
+#toast-container > .toast .toast-title {
+    color: white !important;
+}
+
+/* Customize the message color inside the toast */
+#toast-container > .toast .toast-message {
+    color: white !important;
+}
+
+/* Customize the progress bar color */
+#toast-container > .toast.toast-success {
+    border-color: #243fa2 !important; /* Match the border to background */
+}
+
+#toast-container > .toast .toast-progress {
+    background-color: white !important; /* Progress bar color */
+}
+</style>
+
+<!-- Toast -->
+
+
+<!-- Back to Top -->
+
+
+
+ <!-- Toast -->
 
 <style>
   .go-corner {

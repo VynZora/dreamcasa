@@ -22,7 +22,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="{% static 'admin_static/assets/css/vertical-layout-light/style.css' %}">
   <!-- endinject -->
-  <link rel="icon" href="{% static 'images/favv.png' %}" type="image/x-icon">
+  <link rel="icon" href="{% static 'img1/favv.png' %}" type="image/x-icon">
   <style>
     * {
   margin:0px;
@@ -91,7 +91,7 @@
     </div>
     <div>
       <a class="navbar-brand brand-logo" href="{% url 'dashboard' %}">
-        <img src="{% static 'images/logo.png' %}" alt="logo" style="height: 20px; width: 300px;" />
+        <img src="{% static 'img1/logo.png' %}" alt="logo" style="height: 20px; width: 300px;" />
       </a>
     
     </div>
@@ -249,7 +249,19 @@
       </div>
     </li>
 
-
+    <li class="nav-item nav-category">Chatbot messages</li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#cont" aria-expanded="false" aria-controls="contact">
+        <i class="menu-icon mdi mdi-android"></i>
+        <span class="menu-title">Chatbot messages</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="cont">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="{% url 'view_chatbot_messages' %}">Chatbot messages</a></li>
+        </ul>
+      </div>
+    </li>
 
 
 

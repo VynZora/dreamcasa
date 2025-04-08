@@ -1,545 +1,872 @@
 {% load static %}
-<!-- icon list--><!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
-  <head>
-    <!-- Site Title-->
-    <title>About Us</title>
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Budget Rooms in Munnar for Family | About Dreamcasa</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="Discover family-friendly, affordable adaptations in Munnar at Dreamcasa, your comfortable, simply priced retreat with breathtaking views and friendly service." name="description">
 
-    <link rel="icon" href="{% static 'images/favv.png' %}" type="image/x-icon">
-    <!-- Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,700,400italic%7CPoppins:300,400,500,700">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
-  </head>
-  <style>
-    .middle {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      position: absolute;
-    }
-    
-    .bar {
-      width: 10px;
-      height: 70px;
-      background: #fff;
-      display: inline-block;
-      transform-origin: bottom center;
-      border-top-right-radius: 20px;
-      border-top-left-radius: 20px;
-      animation: loader 2s linear infinite; /* Increased the duration to 2s */
-    }
-    
-    .bar1 {
-      animation-delay: 0.1s;
-    }
-    .bar2 {
-      animation-delay: 0.2s;
-    }
-    .bar3 {
-      animation-delay: 0.3s;
-    }
-    .bar4 {
-      animation-delay: 0.4s;
-    }
-    .bar5 {
-      animation-delay: 0.5s;
-    }
-    .bar6 {
-      animation-delay: 0.6s;
-    }
-    .bar7 {
-      animation-delay: 0.7s;
-    }
-    .bar8 {
-      animation-delay: 0.8s;
-    }
-    
-    @keyframes loader {
-      0% {
-        transform: scaleY(0.1);
-        background: transparent;
-      }
-      50% {
-        transform: scaleY(1);
-        background: #8f859e;
-      }
-      100% {
-        transform: scaleY(0.1);
-        background: transparent;
-      }
-    }
-    
-      </style>
-      <body>
-       <!-- Page preloader-->
-          <div class="page-loader">
-            <div>
-              <div class="middle">
-                <div class="bar bar1"></div>
-                <div class="bar bar2"></div>
-                <div class="bar bar3"></div>
-                <div class="bar bar4"></div>
-                <div class="bar bar5"></div>
-                <div class="bar bar6"></div>
-                <div class="bar bar7"></div>
-                <div class="bar bar8"></div>
-              </div>
-            
-           
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img1/favv.png' %}" type="image/x-icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<!-- Libraries Stylesheet -->
+<link href="{% static 'lib1/animate/animate.min.css' %}" rel="stylesheet">
+<link href="{% static 'lib1/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+<link href="{% static 'lib1/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css1/bootstrap.min.css' %}" rel="stylesheet">
+ 
+
+    <!-- Template Stylesheet -->
+    <link href="{% static 'css1/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>	+91 8590483249</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>dreamcasamunnar@gmail.com</small>
+                </div>
             </div>
-          </div>
-      <!-- Page Header-->
-      <header class="page-header" style="padding-bottom: 24px">
-        <!-- RD Navbar-->
-        <div class="rd-navbar-wrap">
-          <nav class="rd-navbar rd-navbar-default-with-top-panel" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fullwidth" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fullwidth" data-lg-device-layout="rd-navbar-fullwidth" data-md-stick-up-offset="90px" data-lg-stick-up-offset="150px" data-stick-up="true" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true">
-            <div class="rd-navbar-top-panel rd-navbar-collapse">
-              <div class="rd-navbar-top-panel-inner">
-                <div class="left-side">
-                  <div class="group"><span class="text-italic">Follow Us:</span>
-                    <ul class="list-inline">
-                      <li><a class="icon icon-sm icon-secondary-5 fa fa-instagram" href="https://www.instagram.com/_dream_casa_munnar?igsh=MXg5Znd2aTV6N2RiYQ=="></a></li>
-                      <li><a class="icon icon-sm icon-secondary-5 fa fa-facebook" href="#"></a></li>
-                      <li><a class="icon icon-sm icon-secondary-5 fa fa-twitter" href="#"></a></li>
-                    </ul>
-                  </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/_dream_casa_munnar?igsh=MXg5Znd2aTV6N2RiYQ=="><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
                 </div>
-                <div class="center-side">
-                  <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand fullwidth-brand"><a class="brand-name" href="{% url 'index' %}"><img src="{% static 'images/loggo.png' %}" alt="" width="314" height="48"/></a></div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <style>
+        .navbar-light .navbar-nav .nav-link {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    margin-right: 25px;
+    padding: 35px 0;
+    color: rgb(80, 77, 77) !important;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    transition: .5s;
+}
+    </style>
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0" >
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background-color: #fff;">
+            <a href="{% url 'index' %}" class="navbar-brand p-0">
+                <img src="{% static 'img1/loggo.png' %}" alt="Logo" style="height: 30px;"> <!-- Adjust height as needed -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse" style="background-color: #fff;">
+                <div class="navbar-nav ms-auto py-0" >
+                    <a href="{% url 'index' %}" class="nav-item nav-link " >Home</a>
+                    <a href="{% url 'about' %}" class="nav-item nav-link active">About</a>
+                    <a href="{% url 'rooms' %}" class="nav-item nav-link">Rooms</a>
+                    <a href="{% url 'near_by_places' %}" class="nav-item nav-link">Near By places</a>
+                    <a href="{% url 'our_gallery' %}" class="nav-item nav-link">Our Gallery</a>
+                    <a href="{% url 'booking' %}" class="nav-item nav-link">Booking</a>
+               
+                    <a href="{% url 'contact' %}" class="nav-item nav-link">Contacts</a>
                 </div>
-                <div class="right-side">
-                  <!-- Contact Info-->
-                  <div class="contact-info">
-                    <div class="unit unit-middle unit-horizontal unit-spacing-xs">
-                      <div class="unit__left"><span class="icon icon-primary text-middle mdi mdi-phone"></span></div>
-                      <div class="unit__body"><a class="text-middle" href="tel:#">+91 8590483249</a></div>
+              
+            </div>
+        </nav>
+
+        <div class="container-fluid bg-primary py-5 mb-5 hero-header " style="background: linear-gradient(rgba(20, 20, 31, 0.3), rgba(20, 20, 31, 0.3)), url('{% static "img1/breadcrumbs.jpg" %}'); background-position: center; background-size: cover; background-repeat: no-repeat;"
+        >
+            <div class="container py-5">
+                <div class="row justify-content-center py-5">
+                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                        <h1 class="display-3 text-white animated slideInDown">About Us</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                            
+                                <li class="breadcrumb-item text-white active" aria-current="page">About</li>
+                            </ol>
+                        </nav>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-            <div class="rd-navbar-inner">
-              <!-- RD Navbar Panel-->
-              <div class="rd-navbar-panel">
-                <!-- RD Navbar Toggle-->
-                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                <!-- RD Navbar collapse toggle-->
-                <button class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></button>
-                <!-- RD Navbar Brand-->
-                <div class="rd-navbar-brand mobile-brand"><a class="brand-name" href="{% url 'index' %}"><img src="{% static 'images/loggo.png' %}" alt="" width="314" height="48"/></a></div>
-              </div>
-              <div class="rd-navbar-aside-right">
-                <div class="rd-navbar-nav-wrap">
-                  <div class="rd-navbar-nav-scroll-holder">
-                    <ul class="rd-navbar-nav">
-                      <li ><a href="{% url 'index' %}">Home</a>
-                      </li>
-                      <li class="active"><a href="{% url 'about' %}">About Us</a>
-                      </li>
-                      <li><a href="{% url 'rooms' %}">Rooms</a>
-                      </li>
-                      <li><a href="{% url 'near_by_places' %}">Near By Places</a>
-                      </li>
-                      <li><a href="{% url 'our_gallery' %}">Our Gallery</a>
-                      </li>
-                      <li><a href="{% url 'booking' %}">Booking</a>
-                      </li>
-                      <li><a href="{% url 'contact' %}">Contacts</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
         </div>
-      </header>
-      <!-- Breadcrumbs & Page title-->
-      <section class="section-md text-center bg-image breadcrumbs-01">
-        <div class="shell shell-fluid">
-          <div class="range range-xs-center">
-            <div class="cell-xs-12 cell-xl-11">
-              <h2 class="text-white" style="color: #fff;">About Us</h2>
-              <ul class="breadcrumbs-custom">
-                <li><a href="{% url 'index' %}">Home</a></li>
-                <li class="active">About Us</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+    </div>
+    <!-- Navbar & Hero End -->
 
-      <section class="section section-md bg-secondary-4 text-center text-sm-left">
-        <div class="shell">
-          <div class="range range-50 range-md-justify range-sm-middle">
-            <div class="cell-sm-6 wow fadeInUp" data-wow-delay=".1s">
-              <div class="box-outline box-outline__mod-1">
-                <figure><img src="{% static 'images/abcd.jpg' %}" alt="" width="546" height="516"/>
-                </figure>
-              </div>
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="{% static 'img1/abt.jpg' %}" alt="" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
+                    <h1 class="mb-4">Why Choose <span class="text-primary">Dream Casa Munnar?</span></h1>
+                
+                    <p class="mb-4">
+                        Nestled in the heart of Munnar, Dream Casa offers stunning views of rolling hills and peaceful valleys, providing the perfect escape into nature.
+                    </p>
+                
+                    <p class="mb-4">
+                        Enjoy stylish, comfortable rooms and a warm, personalized hospitality experience designed to make your stay memorable.
+                    </p>
+                
+                    <p class="mb-4">
+                        Savor delicious regional and international cuisine, and explore exciting activities like plantation walks, treks, and local sightseeing.
+                    </p>
+                
+                    
+                    <div class="row gy-2 gx-4 mb-4">
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Scenic Hill Views</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Cozy, Modern Rooms</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Authentic Local Cuisine</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Guided Plantation Walks</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Customizable Sightseeing</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Friendly Local Hosts</p>
+                        </div>
+                        
+                    </div><a></a>
+                </div>
             </div>
-            <div class="cell-sm-6 cell-md-5 wow fadeInUp" data-wow-delay=".2s">
-              <h3>Welcome to DreamCasa</h3>
-              <p>Looking for an affordable getaway surrounded by tea mountain views? DreamCasa offers cozy balcony rooms where you can enjoy the scenic beauty of Anachal. We provide homemade hot and spicy meals, along with a delightful campfire experience to complete your stay.</p>
-              <p>In addition to comfortable accommodations, we offer convenient services like local sightseeing taxis, including pickups and drop-offs from Cochin Airport, Allepey, and Thekkady. Various vehicle options are available to suit your budget and preferences.</p>
-              <p>Enjoy a peaceful garden, free private parking, and complimentary Wi-Fi throughout the property. Our 24-hour front desk and full-day security ensure a comfortable and safe experience. DreamCasa features an a la carte or continental breakfast, perfect for starting your day with a taste of local flavors.</p>
-              <a class="button button-primary button-square button-effect-ujarak button-lg" href="#aasdf"><span>Read More</span></a>
-            </div>
-            
-          </div>
         </div>
-      </section>
-     <!-- Icon List-->
-<section class="section-sm bg-white text-sm-left" id="aasdf">
-  <div class="shell">
-    <h3>Amenities</h3>
-    <p style="text-align: left;">  Discover the unique touches that make our services memorable, bringing guests back for another relaxing stay.</p>
-    <div class="range range-50">
-      <!-- Caretaker -->
-      <div class="cell-xs-6 cell-md-4">
-        <article class="box-minimal">
-          <div class="box-minimal-icon-big"><i class="fas fa-user-shield icon-custom-color"></i></div>
-          <h4 class="box-minimal-title">Caretaker</h4>
-          <div class="box-minimal-divider"></div>
-          <div class="box-minimal-text">Dedicated caretaker to assist with all your needs, ensuring a pleasant stay.</div>
-        </article>
-      </div>
-      <!-- Power Backup -->
-      <div class="cell-xs-6 cell-md-4">
-        <article class="box-minimal">
-          <div class="box-minimal-icon-big"><i class="fas fa-bolt icon-custom-color"></i></div>
-          <h4 class="box-minimal-title">Power Backup</h4>
-          <div class="box-minimal-divider"></div>
-          <div class="box-minimal-text">Reliable power backup for uninterrupted comfort.</div>
-        </article>
-      </div>
-      <!-- Housekeeping -->
-      <div class="cell-xs-6 cell-md-4">
-        <article class="box-minimal">
-          <div class="box-minimal-icon-big"><i class="fas fa-broom icon-custom-color"></i></div>
-          <h4 class="box-minimal-title">Housekeeping</h4>
-          <div class="box-minimal-divider"></div>
-          <div class="box-minimal-text">Daily housekeeping to maintain a clean environment.</div>
-        </article>
-      </div>
-      <!-- Wi-Fi -->
-      <div class="cell-xs-6 cell-md-4">
-        <article class="box-minimal">
-          <div class="box-minimal-icon-big"><i class="fas fa-wifi icon-custom-color"></i></div>
-          <h4 class="box-minimal-title">Wi-Fi</h4>
-          <div class="box-minimal-divider"></div>
-          <div class="box-minimal-text">Free high-speed Wi-Fi throughout the property.</div>
-        </article>
-      </div>
-      <!-- CCTV Security -->
-      <div class="cell-xs-6 cell-md-4">
-        <article class="box-minimal">
-          <div class="box-minimal-icon-big"><i class="fas fa-video icon-custom-color"></i></div>
-          <h4 class="box-minimal-title">CCTV Security</h4>
-          <div class="box-minimal-divider"></div>
-          <div class="box-minimal-text">24/7 CCTV monitoring for enhanced safety.</div>
-        </article>
-      </div>
-      <!-- Luggage Assistance -->
-      <div class="cell-xs-6 cell-md-4">
-        <article class="box-minimal">
-          <div class="box-minimal-icon-big"><i class="fas fa-suitcase-rolling icon-custom-color"></i></div>
-          <h4 class="box-minimal-title">Luggage Assistance</h4>
-          <div class="box-minimal-divider"></div>
-          <div class="box-minimal-text">Assistance with luggage for a smooth check-in and check-out experience.</div>
-        </article>
-      </div>
+    </div>
+    <!-- About End -->
+
+<!-- Dream Casa Munnar Start -->
+<section class="container-fluid py-5 bg-white">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <!-- Image Column -->
+       
+
+            <!-- Content Column -->
+            <div class="col-lg-6">
+          
+                <p class="mb-3">Tucked away in the serene hills of Munnar, Dream Casa offers a peaceful retreat surrounded by lush greenery, misty mountains, and scenic tea gardens. Our mission is to provide more than just a place to stay – we offer an experience.</p>
+
+                <div class="row gy-3">
+                    <div class="col-12 d-flex align-items-start">
+                        <i class="fas fa-mountain text-primary fs-4 me-3"></i>
+                        <div>
+                            <h6 class="fw-bold mb-1">Breathtaking Views</h6>
+                            <p class="mb-0">Wake up to panoramic hillscapes and cool valley breezes.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex align-items-start">
+                        <i class="fas fa-bed text-primary fs-4 me-3"></i>
+                        <div>
+                            <h6 class="fw-bold mb-1">Cozy & Elegant Rooms</h6>
+                            <p class="mb-0">Modern, comfortable rooms with balcony views and natural light.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex align-items-start">
+                        <i class="fas fa-utensils text-primary fs-4 me-3"></i>
+                        <div>
+                            <h6 class="fw-bold mb-1">Authentic Dining</h6>
+                            <p class="mb-0">Enjoy homely, spicy meals prepared with love and local ingredients.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex align-items-start">
+                        <i class="fas fa-car-side text-primary fs-4 me-3"></i>
+                        <div>
+                            <h6 class="fw-bold mb-1">Travel & Assistance</h6>
+                            <p class="mb-0">We offer airport pickups, taxi service, sightseeing, and full-day support.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <p class="fw-semibold">Book your escape with us and discover Munnar in a whole new way.</p>
+                </div>
+
+                
+            </div>
+            <div class="col-lg-6">
+                <div class="rounded overflow-hidden shadow">
+                    <img src="{% static 'img1/abcd.jpg' %}" class="img-fluid" alt="Dream Casa Munnar">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Dream Casa Munnar End -->
+
+
+<!-- Amenities Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Amenities</h6>
+            <h1 class="mb-5">Our Comforts</h1>
+            <p class="mb-4">Discover the unique touches that make our services memorable, bringing guests back for another relaxing stay.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item rounded pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-user text-primary mb-4"></i>
+                        <h5>Caretaker</h5>
+                        <p>Dedicated caretaker to assist with all your needs, ensuring a pleasant stay.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="service-item rounded pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-bolt text-primary mb-4"></i>
+                        <h5>Power Backup</h5>
+                        <p>Reliable power backup for uninterrupted comfort throughout your stay.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item rounded pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-broom text-primary mb-4"></i>
+                        <h5>Housekeeping</h5>
+                        <p>Daily housekeeping to maintain a clean and hygienic environment.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="service-item rounded pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-wifi text-primary mb-4"></i>
+                        <h5>Wi-Fi</h5>
+                        <p>Free high-speed Wi-Fi available across all rooms and common areas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item rounded pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-video text-primary mb-4"></i>
+                        <h5>CCTV Security</h5>
+                        <p>24/7 CCTV surveillance to ensure guest safety and peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="service-item rounded pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-suitcase text-primary mb-4"></i>
+                        <h5>Luggage Assistance</h5>
+                        <p>Helping hands for smooth check-in/check-out and baggage handling.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Amenities End -->
+
+  <!-- Testimonial Start -->
+  <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="text-center">
+            <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
+            <h1 class="mb-5">Our Clients Say!!!</h1>
+        </div>
+        
+        <div class="owl-carousel testimonial-carousel position-relative">
+            {% for review in client_reviews %}
+                <div class="testimonial-item bg-white text-center border p-4">
+                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" 
+                         src="{{ review.client_image.url }}" 
+                         alt="{{ review.client_name }}" 
+                         style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">{{ review.client_name }}</h5>
+                    <p>{{ review.designation }}</p>
+                    <p class="mb-0">{{ review.review }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+    
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Company Section -->
+            <!-- About Dream Casa Section -->
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-white mb-3"> Dream Casa</h4>
+                <p>Dream Casa Munnar is your peaceful retreat in nature—offering comfort, warmth, and unforgettable moments, whether you're here for adventure or relaxation.</p>
+
+                <a href="{% url 'about' %}" class="btn btn-sm btn-outline-light mt-2">Read More</a>
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-white mb-3">Company</h4>
+                <a class="btn btn-link" href="{% url 'about' %}">About Us</a>
+                <a class="btn btn-link" href="{% url 'near_by_places' %}">Near By Places</a>
+                <a class="btn btn-link" href="{% url 'our_gallery' %}">Our Gallery</a>
+                <a class="btn btn-link" href="{% url 'contact' %}">Contact Us</a>
+               
+               
+            </div>
+
+            <!-- Contact Section -->
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-white mb-3">Contact</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>
+                    22MR+6PC, SH 16, Chithirapuram, Kerala 685565, India</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 8590483249</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>dreamcasamunnar@gmail.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/_dream_casa_munnar?igsh=MXg5Znd2aTV6N2RiYQ=="><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+          
+
+            <!-- Google Map Section -->
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-white mb-3">Our Location</h4>
+                <div class="position-relative" style="width: 100%; height: 100px;">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.801337214754!2d77.03945707587857!3d10.033246272460046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07990063996cf3%3A0xeaab3cebe6a75e7a!2sDream%20Casa!5e0!3m2!1sen!2sus!4v1743846861115!5m2!1sen!2sus"
+                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
+                </div>
+              </div>
+              
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Dream Casa Munnar</a>, All Right Reserved.
+                    Designed By <a class="border-bottom" href="https://vynzora.com">VynZora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+<!-- Chatbot -->
+<div id="chatbot" class="main-card collapsed">
+    <button id="chatbot_toggle">
+        <svg id="open-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M0 0h24v24H0V0z" fill="none"/>
+            <path d="M15 4v7H5.17l-.59.59-.58.58V4h11m1-2H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm5 4h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1z"/>
+          </svg>
+          <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+            <path d="M0 0h24v24H0V0z" fill="none"/>
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+          </svg>
+    </button>
+  
+    <div class="main-title" style="background-color: #fff;">
+      <img src="{% static 'img1/favv.png' %}" alt="Logo" style="width: 40px; height: 40px; border-radius: 4px;" />
+      <span style="color: #043d4c;">Dream Casa Munnar</span>
+    </div>
+  
+    <div class="chat-area" id="message-box"></div>
+    <div class="line"></div>
+    <div class="input-div">
+      <input class="input-message" name="message" type="text" id="message" placeholder="Type your message ..." />
+      <button class="input-send" onclick="sendMessage()">
+        <svg style="width:24px;height:24px"><path d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/></svg>
+      </button>
     </div>
   </div>
-</section>
 
-<!-- Custom CSS -->
 <style>
-  .icon-custom-color {
-    color: #8f859e;
+  @media (min-width: 450px) {
+    .main-card {
+      width: 96%;
+      max-width: 400px;
+      height: calc(100% - 32px) !important;
+      border-radius: 8px !important;
+      max-height: 600px;
+      margin: 16px!important;
+    }
+  }
+
+  .collapsed {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 24px !important;
+    bottom: 90px !important;
+    right: 25px !important;
+    margin: 16px!important;
+    overflow: hidden;
+  }
+
+  .main-card {
+    background: white;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 420px;
+    max-height: 620px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 9999;
+  }
+
+  #chatbot_toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    height: 60px;
+    width: 60px;
+    background: #043c47;
+    color: white;
+    padding: 14px;
+    z-index: 10;
+    cursor: pointer;
+    
+  }
+
+  #chatbot_toggle:hover {
+    background: #043c47;
+
+  }
+
+  .main-title {
+    background-color: #043c47;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 8px;
+  }
+
+  .main-title svg {
+    height: 24px;
+    margin-right: 8px;
+    
+  }
+
+  .chat-area {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-div {
+    height: 48px;
+    display: flex;
+    border-top: 1px solid #eee;
+  }
+
+  .input-message {
+    padding: 8px 16px;
+    flex-grow: 1;
+    border: none;
+  }
+
+  .input-message:focus {
+    outline: none;
+  }
+
+  .input-send {
+    background: transparent;
+    width: 48px;
+    height: 48px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .input-send:hover {
+    background: lavender;
+  }
+
+  .input-send svg {
+    fill: #043c47;
+  }
+
+  .chat-message-div {
+    display: flex;
+  }
+
+  .chat-message-sent,
+  .chat-message-received {
+    margin: 8px;
+    padding: 8px 16px;
+    background-color: lavender;
+    color: black;
+    border-radius: 8px;
+    animation: fadeIn 0.2s ease-in;
+  }
+
+  .chat-message-sent {
+    margin-left: auto;
+    border-radius: 8px 8px 2px 8px;
+  }
+
+  .chat-message-received {
+    margin-right: auto;
+    border-radius: 8px 8px 8px 2px;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #bbb;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888;
   }
 </style>
+<script>
+    let step = 0;
+    let userData = { name: "", phone: "", email: "", message: "" };
+  
+    function sendMessage() {
+  const msg = document.getElementById("message").value.trim();
+  if (!msg) return;
+  addMsg(msg);
 
-<section class="section section-md">
-
-  <div class="shell">
-    <h3>Near By Places</h3>
-    <div class="range range-30" data-lightgallery="group">
-      {% for place in places %}
-        <div class="cell-sm-6 cell-md-4">
-          <a class="thumbnail-classic" href="{% url 'near_by_place_details' place.id %}">
-            <figure class="image-container">
-              <img src="{{ place.image.url }}" alt="{{ place.name }}" class="image" />
-            </figure>
-            <div class="caption">
-              <p class="caption-title">{{ place.name }}</p>
-              <!-- <p class="caption-text" style="color: white;">{{ place.description|safe }}</p> -->
-            </div>
-          </a>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-
-
-<style>
-  /* Style for image container */
-.image-container {
-position: relative;
-overflow: hidden;
-height: 276px; /* Set the height of the container */
+  if (step === 0) {
+    userData.name = msg;
+    setTimeout(() => addResponseMsg(`Hi ${userData.name}! 👋 What do you want to know?`), 500);
+    setTimeout(() => showOptions(), 1000);
+    step++;
+  } else if (step === 2) {
+    const phoneRegex = /^\+\d{1,3}\d{7,14}$/;
+    if (!phoneRegex.test(msg)) {
+      addResponseMsg("❌ Please enter a valid phone number with country code. Example: +919876543210");
+      return;
+    }
+    userData.phone = msg;
+    addResponseMsg("Thanks! Now please enter your email:");
+    step++;
+  } else if (step === 3) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(msg)) {
+      addResponseMsg("❌ That doesn't look like a valid email. Please enter a correct one.");
+      return;
+    }
+    userData.email = msg;
+    addResponseMsg("Got it! Lastly, please type your message:");
+    step++;
+  } else if (step === 4) {
+    userData.message = msg;
+    sendToAdmin();
+    step++;
+  }
 }
 
-/* Style for images to fit within the container */
-.image {
-width: 100%;
-height: 100%;
-object-fit: cover; /* This will ensure the image covers the area without distortion */
-}
-
-</style>
-<section class="section section-md text-center">
-  <div class="shell">
-      <h3 style="text-align: left;">What People Say</h3>
-      <p style="text-align: left;">Read the experiences that make our services stand out and why guests keep coming back.</p>
-      <div class="range range-50">
-          <div class="cell-xs-12">
-              <div class="box-outline box-outline-fullwidth box-outline__mod-1">
-                  <div class="quote-carousel-wrap">
-                      <!-- Main Carousel for Testimonials -->
-                      <div class="slick-slider" id="testimonial-carousel" data-arrows="false" data-loop="true" data-dots="false" data-autoplay="true" data-autoplay-speed="3000">
-                          {% for review in client_reviews %}
-                              <div class="item">
-                                  <div class="quote-center">
-                                      <div class="quote-center-title">
-                                           <!-- Displaying a snippet of the review -->
-                                      </div>
-                                      <p class="quote-center-body">
-                                          <q>{{ review.review }}</q>
-                                      </p>
-                                      <div class="quote-center-cite">
-                                          <cite>{{ review.client_name }}</cite><span>{{ review.designation }}</span>
-                                      </div>
-                                  </div>
-                              </div>
-                          {% endfor %}
-                      </div>
-
-                      <!-- Thumbnail Carousel for Profile Images -->
-                      <div class="slick-slider" id="profile-carousel" data-arrows="false" data-loop="true" data-dots="false" data-autoplay="true" data-autoplay-speed="3000" data-as-nav-for="#testimonial-carousel">
-                          {% for review in client_reviews %}
-                              <div class="item">
-                                  <figure><img class="img-circle highlight-profile" src="{{ review.client_image.url }}" alt="{{ review.client_name }}" width="100" height="100"/></figure>
-                              </div>
-                          {% endfor %}
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
-
-      
-      <!-- CSS for Highlighting First Profile Image (Optional) -->
-      <!-- <style>
-        .highlight-profile {
-            border: 3px solid #FFD700; /* Gold border for emphasis */
-            padding: 2px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Optional shadow */
-        }
-      </style> -->
-      
-      <!-- jQuery and Slick Carousel Initialization -->
-      <script>
-      $(document).ready(function(){
-        // Initialize the main testimonial carousel
-        $('#testimonial-carousel').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            fade: true, // Smooth fade transition
-            asNavFor: '#profile-carousel',
-            arrows: false,
-        });
-      
-        // Initialize the profile image carousel and sync with testimonial carousel
-        $('#profile-carousel').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            asNavFor: '#testimonial-carousel',
-            focusOnSelect: true,
-            centerMode: true,
-            infinite: true,
-            arrows: false,
-        });
+  
+    function showOptions() {
+      const options = [
+        { label: "About", url: "about" },
+        { label: "Nearby Places", url: "near-by-places" },
+        { label: "Rooms", url: "rooms" },
+        { label: "Gallery", url: "our-gallery" },
+        { label: "Booking", url: "booking" },
+        { label: "Others", url: null }
+      ];
+  
+      const optionHTML = options.map(opt =>
+        opt.url
+          ? `<button onclick="navigateTo('${opt.url}')" class="option-btn">${opt.label}</button>`
+          : `<button onclick="startOthersFlow()" class="option-btn">${opt.label}</button>`
+      ).join(" ");
+  
+      const div = document.createElement("div");
+      div.className = "chat-message-div";
+      div.innerHTML = `<div class='chat-message-received'>${optionHTML}</div>`;
+      document.getElementById("message-box").appendChild(div);
+      scrollToBottom();
+    }
+  
+    function navigateTo(pageUrl) {
+      window.location.href = `/${pageUrl}/`;
+    }
+  
+    function startOthersFlow() {
+      addResponseMsg("Okay, please provide your phone number:");
+      step = 2;
+    }
+  
+    function sendToAdmin() {
+      addResponseMsg("Thank you! Sending your message...");
+  
+      fetch("/save-message/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-CSRFToken": getCookie("csrftoken")
+        },
+        body: JSON.stringify(userData)
+      })
+      .then(res => res.json())
+      .then(data => {
+        addResponseMsg("Your message has been sent. We'll get back to you soon!");
+      })
+      .catch(err => {
+        addResponseMsg("Oops! Something went wrong. Please try again.");
       });
-      </script>
-   
-<!-- Page Footer-->
-<footer class="page-footer text-left text-sm-left">
-  <div class="shell-wide">
-     <div class="page-footer-minimal">
-      <div class="shell-wide">
-        <div class="range range-50">
-          <!-- Opening Hours Section -->
-          <div class="cell-sm-6 cell-md-3 cell-lg-4 wow fadeInUp" data-wow-delay=".1s">
-            <div class="page-footer-minimal-inner">
-              <h4>Reservations</h4>
-              <ul class="list-unstyled">
-                <li>
-                  <div class="group-xs">
-                    <div style="margin-bottom: 10px;">
-                      <dl class="list-desc">
-                        <dt><span class="icon icon-sm mdi mdi-phone"></span></dt>
-                    <dd class="text-gray-darker"><a class="link link-gray-darker" href="tel:+918590483249">+91 8590483249</a></dd>
-                      </dl>
-                    </div>
-                    <div>
-                      <dl class="list-desc">
-                        <dt><span class="icon icon-sm mdi mdi-gmail"></span></dt>
-                        <dd class="text-gray-darker"><a class="link link-gray-darker" href="mail:dreamcasa@gmail.com">dreamcasamunnar@gmail.com</a></dd>
-                      </dl>
-                    </div> 
-                    <ul class="list-inline">
-                      <li><a class="icon icon-sm icon-secondary-5 fa fa-instagram" href="https://www.instagram.com/_dream_casa_munnar?igsh=MXg5Znd2aTV6N2RiYQ=="></a></li>
-                      <li><a class="icon icon-sm icon-secondary-5 fa fa-facebook" href="#"></a></li>
-                      <li><a class="icon icon-sm icon-secondary-5 fa fa-twitter" href="#"></a></li>
-                    </ul>
-                    <!-- <div>
-                      <dl class="list-desc">
-                        <dt>Mail:</dt>
-                        <dd class="text-gray-darker"><span>reservations@hotelriver.com</span></dd>
-                      </dl>
-                    </div> -->
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- Address Section -->
-          <div class="cell-sm-6 cell-md-5 cell-lg-4 wow fadeInUp" data-wow-delay=".2s">
-            <div class="page-footer-minimal-inner">
-              <h4>Quick Links
-              </h4>
-              <ul class="list-unstyled">
-                <li>
-                  <dl class="list-desc">
-                    <!-- <dt><span class="icon icon-sm mdi mdi-map-marker"></span></dt> -->
-                    <dd><a class="link link-gray-darker" href="{% url 'about' %}">About</a></dd>
-                  </dl>
-                </li>
-                <li>
-                  <dl class="list-desc">
-                    <!-- <dt><span class="icon icon-sm mdi mdi-map-marker"></span></dt> -->
-                    <dd><a class="link link-gray-darker" href="{% url 'near_by_places' %}">Near By Places</a></dd>
-                  </dl>
-                </li>
-                <li>
-                  <dl class="list-desc">
-                    <!-- <dt><span class="icon icon-sm mdi mdi-phone"></span></dt> -->
-                    <dd class="text-gray-darker"><a class="link link-gray-darker" href="{% url 'our_gallery' %}">Our Gallery</a></dd>
-                  </dl>
-                </li>
-                
-                <li>
-                  <dl class="list-desc">
-                    <!-- <dt><span class="icon icon-sm mdi mdi-phone"></span></dt> -->
-                    <dd class="text-gray-darker"><a class="link link-gray-darker" href="{% url 'contact' %}">Contacts</a></dd>
-                  </dl>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- Home Stay Amenities Section -->
-          <div class="cell-sm-8 cell-md-4 wow fadeInUp" data-wow-delay=".3s">
-            <div class="page-footer-minimal-inner">
-              <h4>Our Location</h4>
-              <div style="width: 100%; margin-bottom: 15px;">
-                <!-- Google Maps Iframe -->
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100.0!2d77.0!3d10.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z10.033241LC03Ny4wNDIwMzI!5e0!3m2!1sen!2sus!4v1690207390095!5m2!1sen!2sus"
-                  width="100%"
-                  height="150"
-                  style="border:0; border-radius: 8px;"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-              </div>
-            </div>
-          </div>
-          
-          
-        </div>
-        <!-- Footer Credits -->
-        <div class="range range-50">
-          <div class="cell-sm-12 text-center">
-            <p class="rights">
-              <span>&copy;&nbsp;</span><span>2024</span><span>&nbsp;</span> Dream Casa Home Stay. All Rights Reserved. Design by
-              <a href="https://www.vynzora.com">VynZora</a>
-            </p>
-          </div>
-        </div>
-      </div>
+    }
+  
+    function addMsg(msg) {
+      const div = document.createElement("div");
+      div.className = "chat-message-div";
+      div.innerHTML = `<span style='flex-grow:1'></span><div class='chat-message-sent'>${msg}</div>`;
+      document.getElementById("message-box").appendChild(div);
+      document.getElementById("message").value = "";
+      scrollToBottom();
+    }
+  
+    function addResponseMsg(msg) {
+      const div = document.createElement("div");
+      div.className = "chat-message-div";
+      div.innerHTML = `<div class='chat-message-received'>${msg}</div>`;
+      document.getElementById("message-box").appendChild(div);
+      scrollToBottom();
+    }
+  
+    function scrollToBottom() {
+      const box = document.getElementById("message-box");
+      box.scrollTop = box.scrollHeight;
+    }
+  
+    function clearChat() {
+      document.getElementById("message-box").innerHTML = "";
+      userData = { name: "", phone: "", email: "", message: "" };
+      step = 0;
+    }
+  
+    document.getElementById("message").addEventListener("keyup", function (event) {
+      if (event.key === "Enter") sendMessage();
+    });
+  
+    document.getElementById("chatbot_toggle").onclick = function () {
+      const chatbot = document.getElementById("chatbot");
+      const openIcon = document.getElementById("open-icon");
+      const closeIcon = document.getElementById("close-icon");
+  
+      if (chatbot.classList.contains("collapsed")) {
+        chatbot.classList.remove("collapsed");
+        openIcon.style.display = "none";
+        closeIcon.style.display = "";
+        clearChat();
+        setTimeout(() => addResponseMsg("Hi 👋 What’s your name?"), 500);
+      } else {
+        chatbot.classList.add("collapsed");
+        openIcon.style.display = "";
+        closeIcon.style.display = "none";
+      }
+    };
+  
+    function getCookie(name) {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== "") {
+        const cookies = document.cookie.split(";");
+        for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          if (cookie.startsWith(name + "=")) {
+            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+            break;
+          }
+        }
+      }
+      return cookieValue;
+    }
+  </script>
+  
+  <script>
+    document.getElementById("chatbot_toggle").onclick = function () {
+  const chatbot = document.getElementById("chatbot");
+  const openIcon = document.getElementById("open-icon");
+  const closeIcon = document.getElementById("close-icon");
+
+  if (chatbot.classList.contains("collapsed")) {
+    chatbot.classList.remove("collapsed");
+    openIcon.style.display = "none";
+    closeIcon.style.display = "";
+
+    // 🧹 Clear previous chat
+    document.getElementById("message-box").innerHTML = "";
+
+    // 🔄 Reset everything
+    step = 0;
+    userData = { name: "", phone: "", email: "", message: "" };
+
+    // 🗨️ Start fresh greeting
+    setTimeout(() => addResponseMsg("Hi 👋 What’s your name?"), 500);
+  } else {
+    chatbot.classList.add("collapsed");
+    openIcon.style.display = "";
+    closeIcon.style.display = "none";
+  }
+};
+
+  </script>
+  
+  
+  <style>
+    .option-btn {
+      background-color: #043c47;
+      color: white;
+      padding: 6px 12px;
+      margin: 4px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+    }
+    .option-btn:hover {
+      background-color: #06505f;
+    }
+  </style>
+<!-- Chatbot -->
+    
+
+    
+ 
+     <div>
+      <a class="btn-whats pulse" href="https://api.whatsapp.com/send?phone=918590483249"  target="_blank">
+        <i class="fab fa-whatsapp"></i></a>
     </div>
-  </div>
-</footer>
+    <style>
+        .pulse i {
+          position: relative;
+          z-index: 20;
+          top: 16px;
+          font-size: 30px;
+        }
+        
+        .pulse {
+          position: fixed;
+          cursor: pointer;
+          display: block;
+          width: 60px !important;
+          height: 60px;
+          bottom: 40px;
+          right: 40px;
+          background-color: #065265;
+          color: white;
+          border-radius: 50px;
+          text-align: center;
+          transition-duration: 0.5s;
+          animation: pulse-btn 3s infinite;
+          z-index: 9000;
+        }
+        
+        .pulse:hover {
+          background-color: #043c47;
+          color: white;
+        }
+        
+        .my-float {
+          margin-top: 15px;
+        }
+        
+        @-webkit-keyframes pulse-btn {
+          0% {
+            -webkit-box-shadow: 0 0 0 0 #065265;
+          }
+          70% {
+            -webkit-box-shadow: 0 0 0 20px rgba(6, 82, 101, 0);
+          }
+          100% {
+            -webkit-box-shadow: 0 0 0 0 rgba(6, 82, 101, 0);
+          }
+        }
+        
+        .pulse a {
+          color: #fff;
+        }
+        </style>
+        
 
 
-    </div>
-    <!-- PANEL-->
-    <!-- END PANEL-->
-    <!-- Global Mailform Output-->
-    <div class="snackbars" id="form-output-global"></div>
-    <!-- PhotoSwipe Gallery-->
-    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="pswp__bg"></div>
-      <div class="pswp__scroll-wrap">
-        <div class="pswp__container">
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-        </div>
-        <div class="pswp__ui pswp__ui--hidden">
-          <div class="pswp__top-bar">
-            <div class="pswp__counter"></div>
-            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-            <button class="pswp__button pswp__button--share" title="Share"></button>
-            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-            <div class="pswp__preloader">
-              <div class="pswp__preloader__icn">
-                <div class="pswp__preloader__cut">
-                  <div class="pswp__preloader__donut"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-            <div class="pswp__share-tooltip"></div>
-          </div>
-          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-          <div class="pswp__caption">
-            <div class="pswp__caption__cent"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Javascript-->
-    <script src="{% static 'js/core.min.js' %}"></script>
-    <script src="{% static 'js/script.js' %}"></script>
-  </body>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JavaScript Libraries -->
+<script src="{% static 'lib1/wow/wow.min.js' %}"></script>
+<script src="{% static 'lib1/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib1/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'lib1/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'lib1/tempusdominus/js/moment.min.js' %}"></script>
+<script src="{% static 'lib1/tempusdominus/js/moment-timezone.min.js' %}"></script>
+<script src="{% static 'lib1/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+
+<!-- Template Javascript -->
+<script src="{% static 'js1/main.js' %}"></script>
+</body>
+
 </html>

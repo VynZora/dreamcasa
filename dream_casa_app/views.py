@@ -11,18 +11,31 @@ from .forms import ContactModelForm, NearByPlaceForm, ClientReviewForm, GalleryF
 
 
 
+def booking1(request):
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Your booking has been submitted!")
+            return redirect('booking')  # Redirect to a success page or reload
+    else:
+        form = BookingForm()
+    return render(request, 'booking1.html', {'form': form})
+
+
+
+
+
 def index(request):
     # Get all places and randomly select three
     all_places = list(NearByPlace.objects.all())
-    random_places = random.sample(all_places, min(len(all_places), 3))
+    random_places = random.sample(all_places, min(len(all_places), 4))
     client_reviews = ClientReview.objects.all()  # Assuming you need client reviews for other sections
     return render(request, 'index.html', {'places': random_places, 'client_reviews': client_reviews})
 
 def about(request):
-    all_places = list(NearByPlace.objects.all())
-    random_places = random.sample(all_places, min(len(all_places), 3))
     client_reviews = ClientReview.objects.all()
-    return render(request, 'about.html',{'places': random_places, 'client_reviews':client_reviews})
+    return render(request, 'about.html',{ 'client_reviews':client_reviews})
 
 def contact(request):
     if request.method == 'POST':
@@ -93,17 +106,18 @@ def user_login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
+            messages.success(request, f"Welcome back, Admin!")
             return redirect('dashboard')
         else:   
             messages.error(request, "There was an error logging in, try again.")
-            return redirect('login')
+            return redirect('user_login')
     return render(request, 'authenticate/login.html')
 
 
 def logout_user(request):
     logout(request)
     messages.success(request, ("You Were Logged Out"))
-    return redirect('index')
+    return redirect('user_login')
 
 
 #  dashboard
@@ -377,3 +391,50 @@ def add_price(request):
     #  404 view\
 def page_404(request, exception):
     return render(request, '404.html', status=404)
+
+from django.http import JsonResponse
+from .models import ChatMessage
+import json
+
+
+@csrf_exempt
+def save_chat_message(request):
+    print("✅ save_chat_message view called")  # DEBUG LINE
+
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            print("📦 Received data:", data)  # DEBUG LINE
+
+            name = data.get('name')
+            phone = data.get('phone')
+            email = data.get('email')
+            message = data.get('message')
+
+            if not all([name, phone, email, message]):
+                print("❌ Missing field(s)")  # DEBUG LINE
+                return JsonResponse({'status': 'error', 'message': 'All fields are required'}, status=400)
+
+            chat = ChatMessage.objects.create(
+                name=name,
+                phone=phone,
+                email=email,
+                message=message
+            )
+
+            print("✅ Saved to DB:", chat)  # DEBUG LINE
+            return JsonResponse({'status': 'success'})
+        except Exception as e:
+            print("🔥 Error occurred:", e)  # DEBUG LINE
+            return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+    return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=405)
+
+@login_required(login_url='user_login')
+def view_chatbot_messages(request):
+    chats = ChatMessage.objects.all().order_by('-created_at')
+    return render(request, 'admin_pages/view_chatbot_messages.html', {'chats': chats})
+@login_required(login_url='user_login')
+def delete_chatbot_message(request, message_id):
+    message = get_object_or_404(ChatMessage, id=message_id)
+    message.delete()
+    return redirect('view_chatbot_messages')

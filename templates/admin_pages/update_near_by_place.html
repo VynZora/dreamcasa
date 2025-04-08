@@ -42,7 +42,8 @@
   </div>
 </div>
 
-<script src="https://cdn.ckeditor.com/ckeditor5/41.3.1/classic/ckeditor.js"></script>
+
+{% comment %} <script src="https://cdn.ckeditor.com/ckeditor5/41.3.1/classic/ckeditor.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         ClassicEditor
@@ -54,5 +55,31 @@
                 console.error(error);
             });
     });
+</script> {% endcomment %}
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.0/classic/ckeditor.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    ClassicEditor
+      .create(document.querySelector('#updateblogDescription'), {
+        toolbar: [
+          'heading', '|',
+          'bold', 'italic', 'underline', 'strikethrough', 'link', 'uploadFile', '|',
+          'bulletedList', 'numberedList', 'blockQuote', '|',
+          'insertTable', 'imageUpload', 'mediaEmbed', 'undo', 'redo'
+        ],
+        ckfinder: {
+          uploadUrl: '{% url "ckeditor_upload" %}'
+        },
+        simpleUpload: {
+          uploadUrl: '{% url "ckeditor_upload" %}',
+          headers: {
+            'X-CSRFToken': '{{ csrf_token }}'
+          }
+        }
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  });
 </script>
 {% endblock %}
