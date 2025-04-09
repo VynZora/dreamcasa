@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
     'dream_casa_app',
 ]
 
@@ -55,6 +56,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'dream_casa.urls'
 from django.conf.urls import handler404
+
+SITE_ID = 1
 
 TEMPLATES = [
     {

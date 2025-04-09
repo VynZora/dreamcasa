@@ -11,16 +11,6 @@ from .forms import ContactModelForm, NearByPlaceForm, ClientReviewForm, GalleryF
 
 
 
-def booking1(request):
-    if request.method == 'POST':
-        form = BookingForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, "Your booking has been submitted!")
-            return redirect('booking')  # Redirect to a success page or reload
-    else:
-        form = BookingForm()
-    return render(request, 'booking1.html', {'form': form})
 
 
 
@@ -438,3 +428,21 @@ def delete_chatbot_message(request, message_id):
     message = get_object_or_404(ChatMessage, id=message_id)
     message.delete()
     return redirect('view_chatbot_messages')
+
+
+
+
+
+# robots.txt
+from django.http import HttpResponse
+
+def robots_txt(request):
+    lines = [
+        "User-agent: *",
+        "Disallow: /admin/",
+        "Disallow: /secret/",
+        "Disallow: /private/",
+        "Allow: /static/",
+        "Sitemap: https://dreamcasamunnar.com/sitemap.xml",
+    ]
+    return HttpResponse("\n".join(lines), content_type="text/plain")

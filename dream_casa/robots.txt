@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /secret/
+Disallow: /private/
+Allow: /static/
+Sitemap: https://dreamcasamunnar.com/sitemap.xml
