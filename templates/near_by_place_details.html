@@ -136,7 +136,10 @@
                     </div>
                     <div>
                         <h2 class="mb-3">{{ places.name }}</h2>
-                        <p class="text-muted">{{ places.description|safe }}</p>
+                        <div class="ckeditor-content text-muted">
+                          {{ places.description|safe }}
+                      </div>
+                      
                     </div>
                 </div>
     
@@ -158,6 +161,41 @@
             </div>
         </div>
     </section>
+
+    <style>
+      .ckeditor-content {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #6c757d; /* matches Bootstrap's .text-muted */
+}
+
+.ckeditor-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Optional: center images */
+    border-radius: 6px; /* Optional: round corners */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+.ckeditor-content h1,
+.ckeditor-content h2,
+.ckeditor-content h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.ckeditor-content p {
+    margin-bottom: 1rem;
+}
+
+.ckeditor-content iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+    </style>
     
     
 
