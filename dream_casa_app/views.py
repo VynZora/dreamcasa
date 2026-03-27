@@ -60,9 +60,9 @@ def near_by_places(request):
     places = NearByPlace.objects.all().order_by('-created_date')
     return render(request, 'near_by_places.html',{'places':places})
 
-def near_by_place_details(request,place_id):
-    places = get_object_or_404(NearByPlace, pk=place_id)  # Use blog_id instead of pk
-    other_places = NearByPlace.objects.exclude(id=place_id).order_by('-created_date')[:6] 
+def near_by_place_details(request, slug):
+    places = get_object_or_404(NearByPlace, slug=slug)
+    other_places = NearByPlace.objects.exclude(slug=slug).order_by('-created_date')[:6] 
     return render(request, 'near_by_place_details.html',{'places':places,'other_places':other_places})
     
 

@@ -12,7 +12,7 @@
     <!-- Favicon -->
     <link rel="icon" href="{% static 'img1/favv.png' %}" type="image/x-icon">
 
-    <link rel="canonical" href="https://dreamcasamunnar.com/near-by-place-details/<place_id>/" />
+    <link rel="canonical" href="https://dreamcasamunnar.com/near-by-place-details/{{ places.slug }}/" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -150,7 +150,7 @@
                     <h4 class="mb-4">Other Places</h4>
                     <div class="list-group shadow-sm">
                         {% for other_place in other_places %}
-                            <a href="{% url 'near_by_place_details' other_place.id %}" class="list-group-item list-group-item-action d-flex align-items-center">
+                            <a href="{% url 'near_by_place_details' other_place.slug %}" class="list-group-item list-group-item-action d-flex align-items-center">
                                 <img src="{{ other_place.image.url }}" alt="{{ other_place.name }}" class="me-3 rounded" style="width: 80px; height: 60px; object-fit: cover;">
                                 <div class="flex-grow-1">
                                     {{ other_place.name }}

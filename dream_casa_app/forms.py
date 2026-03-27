@@ -13,7 +13,7 @@ class ContactModelForm(forms.ModelForm):
 class NearByPlaceForm(forms.ModelForm):
     class Meta:
         model = NearByPlace
-        fields = '__all__'
+        exclude = ('slug',)
 
 # Clien Review
 class ClientReviewForm(forms.ModelForm):
@@ -58,6 +58,5 @@ class BookingForm(forms.ModelForm):
         # Set the allowed input formats for both arrival_date and departure_date fields
         self.fields['arrival_date'].input_formats = ['%A %d %B %Y']
         self.fields['departure_date'].input_formats = ['%A %d %B %Y']
-
 
 

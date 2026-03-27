@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.timezone import now
 from ckeditor.fields import RichTextField
 from django.utils import timezone
+from django.utils.text import slugify
 
 
 # Create your models here.
@@ -16,12 +17,24 @@ class ContactModel(models.Model):
 
 class NearByPlace(models.Model):
     name = models.CharField(max_length=200,blank=True, null=True)
+    slug = models.SlugField(max_length=255, unique=True, blank=True, null=True)
     description = models.TextField()
     image = models.ImageField(upload_to='Place_images/',blank=True, null=True)
     created_date = models.DateTimeField(default=now,blank=True, null=True)
 
     def __str__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            base = slugify(self.name) if self.name else "nearby-place"
+            candidate = base
+            counter = 1
+            while NearByPlace.objects.filter(slug=candidate).exclude(pk=self.pk).exists():
+                counter += 1
+                candidate = f"{base}-{counter}"
+            self.slug = candidate
+        super().save(*args, **kwargs)
 
 # Client Reviews
 class ClientReview(models.Model):
@@ -88,4 +101,3 @@ class ChatMessage(models.Model):
 
     def __str__(self):
         return self.name
-

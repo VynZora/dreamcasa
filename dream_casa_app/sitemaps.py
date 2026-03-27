@@ -25,4 +25,4 @@ class NearbyPlaceSitemap(Sitemap):
         return NearByPlace.objects.all()
 
     def location(self, obj):
-        return reverse('near_by_place_details', args=[obj.id])
+        return reverse('near_by_place_details', args=[obj.slug])
