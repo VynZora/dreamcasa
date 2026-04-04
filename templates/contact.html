@@ -25,6 +25,7 @@
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
 <!-- Libraries Stylesheet -->
@@ -206,6 +207,13 @@
                                 </div>
                             </div>
                             <div class="col-12">
+                                {% if recaptcha_site_key %}
+                                    <div class="g-recaptcha" data-sitekey="{{ recaptcha_site_key }}"></div>
+                                {% else %}
+                                    <small class="text-danger d-block">reCAPTCHA is not configured.</small>
+                                {% endif %}
+                            </div>
+                            <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
                             </div>
                         </div>
@@ -293,7 +301,17 @@
     <script>
       {% if messages %}
           {% for message in messages %}
-              toastr.success("{{ message }}");
+              (function(tag, text) {
+                  let type = 'info';
+                  if (tag.includes('success')) {
+                      type = 'success';
+                  } else if (tag.includes('danger') || tag.includes('error')) {
+                      type = 'error';
+                  } else if (tag.includes('warning')) {
+                      type = 'warning';
+                  }
+                  toastr[type](text);
+              })("{{ message.tags }}", "{{ message }}");
           {% endfor %}
       {% endif %}
   </script>

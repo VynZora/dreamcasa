@@ -3,7 +3,11 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_protect
 from django.contrib import messages
+from django.conf import settings
 import random
+import json
+import urllib.parse
+import urllib.request
 
 from .models import ContactModel, NearByPlace, ClientReview, Gallery, Folder, GalleryImage, Booking, RoomPrice
 from .forms import ContactModelForm, NearByPlaceForm, ClientReviewForm, GalleryForm, FolderForm, BookingForm
@@ -14,6 +18,38 @@ from .forms import ContactModelForm, NearByPlaceForm, ClientReviewForm, GalleryF
 
 
 
+
+
+def _verify_recaptcha(token, remoteip=None):
+    secret = getattr(settings, 'RECAPTCHA_SECRET_KEY', '')
+    if not secret:
+        return False, 'reCAPTCHA is not configured.'
+
+    if not token:
+        return False, 'Please complete the reCAPTCHA.'
+
+    data = {
+        'secret': secret,
+        'response': token,
+    }
+    if remoteip:
+        data['remoteip'] = remoteip
+
+    try:
+        payload = urllib.parse.urlencode(data).encode()
+        req = urllib.request.Request(
+            'https://www.google.com/recaptcha/api/siteverify',
+            data=payload,
+        )
+        with urllib.request.urlopen(req, timeout=5) as response:
+            result = json.loads(response.read().decode())
+    except Exception:
+        return False, 'reCAPTCHA verification failed. Please try again.'
+
+    if result.get('success'):
+        return True, None
+
+    return False, 'reCAPTCHA verification failed. Please try again.'
 
 
 def index(request):
@@ -31,12 +67,34 @@ def contact(request):
     if request.method == 'POST':
         form = ContactModelForm(request.POST)
         if form.is_valid():
+            recaptcha_token = request.POST.get('g-recaptcha-response', '')
+            recaptcha_ok, recaptcha_error = _verify_recaptcha(
+                recaptcha_token,
+                request.META.get('REMOTE_ADDR'),
+            )
+            if not recaptcha_ok:
+                messages.error(request, recaptcha_error)
+                return render(
+                    request,
+                    'contact.html',
+                    {
+                        'form': form,
+                        'recaptcha_site_key': getattr(settings, 'RECAPTCHA_SITE_KEY', ''),
+                    },
+                )
             form.save()
             messages.success(request, 'Your message has been successfully submitted.')
             return redirect('contact')
     else:
         form = ContactModelForm()
-    return render(request, 'contact.html', {'form': form})
+    return render(
+        request,
+        'contact.html',
+        {
+            'form': form,
+            'recaptcha_site_key': getattr(settings, 'RECAPTCHA_SITE_KEY', ''),
+        },
+    )
 
 def booking(request):
     if request.method == 'POST':
